@@ -1,1 +1,1 @@
-first_reported_at,event,area_id,area_label,source,listing_url,address,place,bedrooms,bathrooms,property_type,rent_monthly,currency,tier,people,per_person,fit_score,benchmark_value,benchmark_pct,travel_summary,confidence,flags,dedupe_key
+first_reported_at,event,area_id,area_label,source,listing_url,address,place,bedrooms,bathrooms,property_type,rent_monthly,currency,tier,people,per_person,fit_score,benchmark_value,benchmark_pct,travel_summary,confidence,flags,dedupe_key,cost_monthly,floor_area_m2,energy_rating
