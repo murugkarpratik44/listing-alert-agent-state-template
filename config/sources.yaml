@@ -1,0 +1,7 @@
+# Sites whose alert emails are read. Only these exact sender addresses are processed.
+pack: ie-rentals
+sources:
+  - id: example
+    name: Example.com
+    senders: ["alerts@example.com"]
+    silence_hours: 48           # warn when no alert email arrives for this long

@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "listing-alert-agent": {
+      "source": {
+        "source": "github",
+        "repo": "murugkarpratik44/listing-alert-agent"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "listing-alert-agent@listing-alert-agent": true
+  }
+}

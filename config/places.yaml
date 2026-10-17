@@ -1,0 +1,11 @@
+# Places that matter to you (anchors) and places listings may come from (search_places).
+# Travel times from every search place to every anchor are cached in data/travel-cache.csv.
+anchors:
+  - id: work
+    label: Work
+    address: "Workplace address or landmark"
+    modes: [driving]            # driving | walking | bicycling | transit
+    max_minutes: 45             # longest trip you would accept
+    trips_per_week: 5
+    importance: high            # high | medium | low
+search_places: []               # e.g. [{name: Naas, region: Kildare}, {name: Dublin 8, region: Dublin}]

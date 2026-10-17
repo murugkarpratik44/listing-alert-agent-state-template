@@ -1,0 +1,38 @@
+# Your search profile. The setup skill fills this in from your answers; you can also edit it.
+# Schema: listing-alert-agent/schemas/profile.schema.json in the plugin.
+owner:
+  name: ""                      # first name used in emails (optional)
+  email: you@example.com        # alerts go ONLY to this address
+  timezone: Europe/Dublin       # IANA time zone, for quiet hours and the digest
+goal:
+  type: rent                    # rent | buy | job | vehicle | other
+  country: IE                   # two-letter country code
+  currency: EUR
+  move_by: null                 # "YYYY-MM-DD" in quotes, or null
+  pack: ie-rentals              # the plugin pack for your country and goal
+criteria:
+  property_types: [apartment, house]
+  exclude_types: [house share, room]
+  bedrooms: [1, 2]
+  min_bathrooms: 1
+  must_haves: []
+  nice_to_haves: []
+  deal_breakers: []
+budget:
+  model: total                  # total = one budget; per_person = cost shared by occupancy rules below
+  amount: 1500                  # monthly; per person when model is per_person
+  stretch_pct: 10               # listings up to this % over budget are shown as "stretch"
+  bills_included: false
+  occupancy_rules: []           # per_person only, e.g. [{when: {bedrooms: 2, min_bathrooms: 2}, people: 2}, {people: 1}]
+areas:
+  - id: example-area
+    label: Example area
+    type: region                # region = words in the address; travel_time = within N minutes of a place in places.yaml
+    match: [example]
+    priority: 1
+weights: {budget: 30, travel: 30, value: 15, features: 15, freshness: 5, confidence: 5}
+alerts:
+  push_tiers: [act_now]         # which tiers trigger a phone notification
+  quiet_hours: {start: "23:00", end: "07:00"}
+  digest: {day: sunday, time: "10:00"}
+  digest_cc: null               # one extra address for the weekly digest only
